@@ -4,12 +4,11 @@ import os
 import subprocess
 
 app = Flask(__name__)
-app.secret_key = "supersecretkey"  # Necessário para usar flash messages
+app.secret_key = "supersecretkey" 
 
-# Carrega o modelo Whisper mais preciso
+# Carrega o modelo Whisper
 model = whisper.load_model("small")
 
-# Certifica-se de que a pasta de uploads existe
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
